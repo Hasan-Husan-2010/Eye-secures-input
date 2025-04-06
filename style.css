@@ -1,0 +1,128 @@
+* {
+    box-sizing: border-box;
+    font-family: cursive;
+}
+span,label,a {
+    display: inline-block;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100dvh;
+    margin: 0;
+    overflow: hidden;
+    background-color: #EF483E;
+}
+.form {
+    width: 50%;
+    height: 500px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.df {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.inp {
+    width: 80%;
+    font-size: 25px;
+    border: none;
+    padding: 5px 10px;
+    transition: all 0.2s ease-in-out;
+    letter-spacing: 2px;
+}
+.inp:focus {
+    outline: none;
+    border: none;
+    box-shadow: none;
+}
+.eye {
+    width: 100px;
+    height: 50px;
+    position: relative;
+    background-color: white;
+    border: 5px solid #000;
+    border-radius: 50%;
+    position: relative;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    overflow: hidden;
+    transition: height 0.3s ease;
+}
+.secure {
+    position: relative;
+}
+.eyelashes {
+    position: absolute;
+    top: -13px; /* Kipriklarni yuqoriroqqa chiqarish */
+    left: 50%;
+    width: 110px; /* Kipriklar biroz kengroq */
+    height: 15px;
+    display: flex;
+    justify-content: space-between;
+    transform: translateX(-50%);
+    z-index: 10; /* Ko'z ustida ko'rinishi uchun */
+}
+.eyelash {
+    width: 5px;
+    height: 15px;
+    background-color: black;
+    border-radius: 2px;
+    transform-origin: bottom;
+    transition: height 0.3s;
+}
+.eyelash_closes {
+    height: 5px;
+    background-color: #111;
+    transition: height 0.3s;
+}
+.eyelash:nth-child(1) { transform: rotate(-25deg) translateY(15px); }
+.eyelash:nth-child(2) { transform: rotate(-15deg) translateY(3px); }
+.eyelash:nth-child(3) { transform: rotate(0deg); }
+.eyelash:nth-child(4) { transform: rotate(15deg) translateY(3px); }
+.eyelash:nth-child(5) { transform: rotate(25deg) translateY(15px); }
+
+.iris {
+    width: 35px;
+    height: 35px;
+    background: radial-gradient(circle, #4a90e2 40%, black 60%);
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.1s ease;
+}
+.sclera {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.pupil {
+    width: 12px;
+    height: 12px;
+    background-color: black;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: transform 0.1s ease;
+}
+
+.closed {
+    height: 5px;
+    border: 5px solid #111;
+    transition: height 0.3s ease;
+}
