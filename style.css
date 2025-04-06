@@ -14,6 +14,9 @@ body {
     overflow: hidden;
     background-color: #EF483E;
 }
+.box {
+    max-width: 1800px;
+}
 .form {
     width: 50%;
     height: 500px;
